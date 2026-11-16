@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Meta Blade symbol</title>
+  <desc id="desc">An angular cyan and lime signal blade mark without letters.</desc>
+  <defs>
+    <linearGradient id="blade" x1="9" y1="11" x2="55" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5CECFF"/>
+      <stop offset=".55" stop-color="#A88BFF"/>
+      <stop offset="1" stop-color="#D6FF6B"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#06070B"/>
+  <g filter="url(#glow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 18 24 10h27L40 24H23l-9 11" stroke="url(#blade)" stroke-width="4"/>
+    <path d="m51 45-11 9H14l11-14h17l9-11" stroke="#5CECFF" stroke-width="4"/>
+    <path d="M16 29h12" stroke="#D6FF6B" stroke-width="3"/>
+  </g>
+</svg>

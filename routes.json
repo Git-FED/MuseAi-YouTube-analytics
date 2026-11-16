@@ -1,0 +1,21 @@
+{
+  "routes": {
+    "home": "index.html",
+    "promotions": "pages/promotions.html",
+    "pricing": "pages/pricing.html",
+    "support": "pages/support.html",
+    "sponsors": "pages/sponsors.html",
+    "discord": "pages/discord.html",
+    "nsfw-request": "pages/nsfw-request.html",
+    "age-gate": "pages/age-gate.html",
+    "success": "pages/success.html",
+    "private-communities": "pages/private-communities.html",
+    "join": "pages/join.html",
+    "login": "pages/login.html",
+    "invite": "pages/invite.html"
+  },
+  "deployment": {
+    "github-pages": "Upload the folder contents to a repository and enable Pages from the selected branch.",
+    "cloudflare-pages": "Connect the repository as a static site. No build command is required; output directory is the project root."
+  }
+}

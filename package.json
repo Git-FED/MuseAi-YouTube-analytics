@@ -1,0 +1,11 @@
+{
+  "name": "meta-blade-animated-background",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A standalone dark signal-lattice animated background for Meta Blade.",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "check": "node --check src/app.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FED-OS — Private Communities</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/meta-blade-symbol.svg">
+  <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+  <main class="scene">
+    <canvas id="signal-canvas"></canvas><div class="vignette"></div><div class="grain"></div>
+    <div class="page-shell">
+      <div class="page-nav"><a class="back-link" href="../index.html">← Meta Blade home</a><a class="back-link" href="support.html">Support →</a></div>
+      <div class="eyebrow" style="margin-top:42px"><span class="status-dot"></span> FED-OS / PRIVATE COMMUNITIES</div>
+      <h1>Private<br><span>signal room.</span></h1>
+      <p class="page-lede">The private Matrix room is restricted. This page keeps the main footer public while placing the access steps behind an explicit 18+ and country-eligibility checkpoint.</p>
+      <form id="matrix-gate" class="age-check">
+        <label><input id="matrix-age" type="checkbox" required> I confirm that I am 18 years of age or older.</label>
+        <label><input id="matrix-terms" type="checkbox" required> I understand this is a private, country-limited community and I will follow its rules.</label>
+        <label for="country">Choose your country of residence</label>
+        <select id="country" required>
+          <option value="">Select a country…</option>
+          <option value="Canada">Canada</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Russia">Russia</option>
+          <option value="Iran">Iran</option>
+          <option value="Somalia">Somalia</option>
+          <option value="Turkmenistan">Turkmenistan</option>
+          <option value="other">Other / not listed</option>
+        </select>
+        <button class="button button--primary" type="submit">Check eligibility →</button>
+        <p id="matrix-message" class="provider-note" role="status" aria-live="polite"></p>
+        <a id="matrix-link" class="button button--ghost" href="https://matrix.to/#/#fed-os:matrix.org" target="_blank" rel="noopener noreferrer" hidden>Open private Matrix room ↗</a>
+      </form>
+    </div>
+    <footer class="fed-footer" aria-label="FED-OS footer">
+  <div class="fed-footer-top">
+    <div class="fed-footer-brand">FED-OS</div>
+    <div class="fed-footer-caption">A connected creator ecosystem for analytics, community, experiments, and sharp little signals.</div>
+  </div>
+  <div class="fed-footer-groups">
+    <section class="fed-footer-group"><h2>Explore</h2><div class="footer-pills">
+      <a class="footer-pill" href="join.html">Join / Sign in</a>
+      <a class="footer-pill" href="login.html">Login</a>
+      <a class="footer-pill" href="invite.html">Community</a>
+      <a class="footer-pill" href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Ecosystem</a>
+      <a class="footer-pill" href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Join FED-OS</a>
+      <a class="footer-pill" href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a>
+      <a class="footer-pill" href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Contact</h2><div class="footer-pills">
+      <a class="footer-pill" href="mailto:contact@fedpromptly.com">General</a>
+      <a class="footer-pill" href="mailto:support@fedpromptly.com">Support</a>
+      <a class="footer-pill" href="mailto:business@fedpromptly.com">Business</a>
+      <a class="footer-pill" href="mailto:careers@fedpromptly.com">Careers</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Media + support</h2><div class="footer-pills">
+      <a class="footer-pill" href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a>
+      <a class="footer-pill" href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a class="footer-pill" href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed Blog</a>
+      <a class="footer-pill" href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a>
+      <a class="footer-pill" href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Supporters</a>
+      <a class="footer-pill" href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Community + social</h2><div class="footer-pills">
+      <a class="footer-pill" href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers</a>
+      <a class="footer-pill" href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      <a class="footer-pill" href="https://x.com/Fedpromptly" target="_blank" rel="noopener noreferrer">Ads / X</a>
+      <a class="footer-pill" href="private-communities.html">Private communities</a>
+    </div></section>
+  </div>
+  <div class="fed-footer-bottom"><span>FED-OS / Meta Blade / static deploy ready</span><span><a href="../index.html">Home</a> · <a href="../pages/support.html">Support</a> · <a href="../pages/sponsors.html">Sponsors</a></span></div>
+</footer>
+  </main>
+  <script>
+    const form = document.getElementById('matrix-gate');
+    const message = document.getElementById('matrix-message');
+    const room = document.getElementById('matrix-link');
+    const eligible = new Set(['Canada','Switzerland','Russia','Iran','Somalia','Turkmenistan']);
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      room.hidden = true;
+      const country = document.getElementById('country').value;
+      const ok = document.getElementById('matrix-age').checked && document.getElementById('matrix-terms').checked && eligible.has(country);
+      if (ok) {
+        message.textContent = 'Eligibility confirmed for the selected country. The private room link is now available.';
+        message.style.color = 'var(--acid)';
+        room.hidden = false;
+      } else {
+        message.textContent = 'Access is limited to confirmed adults residing in Canada, Switzerland, Russia, Iran, Somalia, or Turkmenistan.';
+        message.style.color = '#ff8a8a';
+      }
+    });
+  </script>
+  <script type="module" src="../src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meta Blade — Payment Lane</title><link rel="icon" href="../assets/meta-blade-symbol.svg"><link rel="stylesheet" href="../src/styles.css"></head><body><main class="scene"><canvas id="signal-canvas"></canvas><div class="vignette"></div><div class="grain"></div><div class="page-shell"><a class="back-link" href="pricing.html">← Back to support lanes</a><div class="eyebrow" style="margin-top:42px"><span class="status-dot"></span> AGE VERIFIED / PROVIDER SELECT</div><h1 id="payment-title">Payment<br><span>lane.</span></h1><p class="page-lede">Choose the provider that fits. These are separate routes; Meta Blade does not store payment information on this static site.</p><div class="pay-frame"><div id="subscription-providers"><h2>Subscription providers</h2><div class="provider"><h3>PayPal Fedpromptly</h3><p class="provider-note">Recurring subscription checkout. The provider controls billing and approval.</p><div id="paypal-button-container-P-4FD24238VX4902214NK2XP2Y"></div><script src="https://www.paypal.com/sdk/js?client-id=BAA_ndqaWMyQwTnDZ0LXwLQ22jdJo9uxkeXYqmBbF-hD41HMiZ83mvOcx1Kti0b6ZfXfje7Q1ievNaS8Ok&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script><script>if(window.paypal){paypal.Buttons({style:{shape:'rect',color:'gold',layout:'vertical',label:'subscribe'},createSubscription:function(data,actions){return actions.subscription.create({plan_id:'P-4FD24238VX4902214NK2XP2Y',quantity:1})},onApprove:function(data){location.href='success.html?provider=paypal&subscription='+encodeURIComponent(data.subscriptionID)}}).render('#paypal-button-container-P-4FD24238VX4902214NK2XP2Y')}</script></div><div class="provider"><h3>Stripe Fedpromptly</h3><p class="provider-note">Recurring checkout through Stripe.</p><script async src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button buy-button-id="buy_btn_1UJKaaJaRf233kfWKZ81fcIe" publishable-key="pk_live_51UIdAGJaRf233kfWlFacR31IYVGdjCVAttNFzIgQGXQzrUdc894iJcBqamRZNwF11z2AN5kvjyzitor462f2egVI00UmKj0sd8"></stripe-buy-button></div></div><div id="donation-providers"><h2>Donation providers</h2><div class="provider provider--donate"><h3>Buy Me a Coffee</h3><p class="provider-note">One-time support for the creator and project experiments.</p><a href="https://www.buymeacoffee.com/fedpromptly" target="_blank" rel="noreferrer noopener">Donate via Buy Me a Coffee ↗</a></div><div class="provider provider--crypto"><h3>Crypto / Bitcoin</h3><p class="provider-note">One-time crypto checkout through NOWPayments.</p><a href="https://nowpayments.io/payment/?iid=5997958570&source=button" target="_blank" rel="noreferrer noopener">Open NOWPayments ↗</a></div></div><div id="sponsor-providers"><h2>Sponsorship</h2><div class="provider provider--sponsor"><h3>GitHub Sponsors</h3><p class="provider-note">Sponsor Git-FED directly on GitHub.</p><a href="sponsors.html">Open GitHub Sponsors card →</a></div></div></div></div><footer class="fed-footer" aria-label="FED-OS footer">
+  <div class="fed-footer-top">
+    <div class="fed-footer-brand">FED-OS</div>
+    <div class="fed-footer-caption">A connected creator ecosystem for analytics, community, experiments, and sharp little signals.</div>
+  </div>
+  <div class="fed-footer-groups">
+    <section class="fed-footer-group"><h2>Explore</h2><div class="footer-pills">
+      <a class="footer-pill" href="join.html">Join / Sign in</a>
+      <a class="footer-pill" href="login.html">Login</a>
+      <a class="footer-pill" href="invite.html">Community</a>
+      <a class="footer-pill" href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Ecosystem</a>
+      <a class="footer-pill" href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Join FED-OS</a>
+      <a class="footer-pill" href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a>
+      <a class="footer-pill" href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Contact</h2><div class="footer-pills">
+      <a class="footer-pill" href="mailto:contact@fedpromptly.com">General</a>
+      <a class="footer-pill" href="mailto:support@fedpromptly.com">Support</a>
+      <a class="footer-pill" href="mailto:business@fedpromptly.com">Business</a>
+      <a class="footer-pill" href="mailto:careers@fedpromptly.com">Careers</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Media + support</h2><div class="footer-pills">
+      <a class="footer-pill" href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a>
+      <a class="footer-pill" href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a class="footer-pill" href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed Blog</a>
+      <a class="footer-pill" href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a>
+      <a class="footer-pill" href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Supporters</a>
+      <a class="footer-pill" href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips</a>
+    </div></section>
+    <section class="fed-footer-group"><h2>Community + social</h2><div class="footer-pills">
+      <a class="footer-pill" href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers</a>
+      <a class="footer-pill" href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      <a class="footer-pill" href="https://x.com/Fedpromptly" target="_blank" rel="noopener noreferrer">Ads / X</a>
+      <a class="footer-pill" href="private-communities.html">Private communities</a>
+    </div></section>
+  </div>
+  <div class="fed-footer-bottom"><span>FED-OS / Meta Blade / static deploy ready</span><span><a href="../index.html">Home</a> · <a href="../pages/support.html">Support</a> · <a href="../pages/sponsors.html">Sponsors</a></span></div>
+</footer></main><script>const lane=new URLSearchParams(location.search).get('lane')||'subscription';const title=document.getElementById('payment-title');title.firstChild.textContent=lane.charAt(0).toUpperCase()+lane.slice(1)+'\n';if(lane==='subscription'){document.getElementById('donation-providers').style.display='none';document.getElementById('sponsor-providers').style.display='none'}if(lane==='donation'){document.getElementById('subscription-providers').style.display='none';document.getElementById('sponsor-providers').style.display='none'}if(lane==='sponsorship'){document.getElementById('subscription-providers').style.display='none';document.getElementById('donation-providers').style.display='none'}</script><script type="module" src="../src/app.js"></script></body></html>
