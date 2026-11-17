@@ -1,5 +1,7 @@
 # Meta Blade — Signal Lattice
 
+<img width="1281" height="692" alt="Screenshot 2026-11-16 183149" src="https://github.com/user-attachments/assets/af69377b-d705-4555-8943-8f3dc7570f49" />
+
 A standalone dark animated front end for **Meta Blade — Automated Muse Ai YouTube analytics & moderation**.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-5cecff.svg)](LICENSE)
